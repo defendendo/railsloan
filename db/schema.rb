@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823072231) do
+ActiveRecord::Schema.define(version: 20160823082855) do
+
+  create_table "loanposts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "gender"
+    t.integer  "phone"
+    t.string   "occupation"
+    t.string   "income"
+    t.string   "homephone"
+    t.string   "facebook"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,6 +41,8 @@ ActiveRecord::Schema.define(version: 20160823072231) do
     t.datetime "updated_at",                          null: false
     t.string   "provider"
     t.string   "uid"
+    t.string   "gender"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
