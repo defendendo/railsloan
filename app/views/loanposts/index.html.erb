@@ -1,0 +1,27 @@
+<%= link_to "Facebook 登入", user_facebook_omniauth_authorize_path %> 
+<br><br>
+<%= link_to("登出", destroy_user_session_path, method: :delete ) %> 
+
+
+<br><br>
+
+<%= link_to "上傳", new_loanpost_path %>
+
+
+
+<!--
+<% @loanposts.each do |loanpost| %>
+	<%= image_tag loanpost.image, width:100 %>
+	<%= loanpost.email %>
+	<%= loanpost.phone %>
+	<%= loanpost.occupation %>
+	<%= loanpost.income %>
+	<%= loanpost.homephone %>
+	<%= image_tag loanpost.image2, width:100 %>
+	<%= image_tag loanpost.image3, width:100 %>
+	<%= image_tag loanpost.image4, width:100 %>
+	<%= loanpost.facebook %>
+	<br>
+<% end %>
+-->
+

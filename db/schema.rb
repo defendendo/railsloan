@@ -11,19 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823082855) do
+ActiveRecord::Schema.define(version: 20160823235308) do
 
   create_table "loanposts", force: :cascade do |t|
     t.string   "name"
-    t.string   "email"
     t.string   "gender"
-    t.integer  "phone"
     t.string   "occupation"
     t.string   "income"
     t.string   "homephone"
     t.string   "facebook"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "phone"
+    t.string   "email"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image2_file_name"
+    t.string   "image2_content_type"
+    t.integer  "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string   "image3_file_name"
+    t.string   "image3_content_type"
+    t.integer  "image3_file_size"
+    t.datetime "image3_updated_at"
+    t.string   "image4_file_name"
+    t.string   "image4_content_type"
+    t.integer  "image4_file_size"
+    t.datetime "image4_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
